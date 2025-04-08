@@ -1,0 +1,978 @@
+{
+	"info": {
+		"_postman_id": "cac1bf80-1783-494f-8478-96aa2ad322bf",
+		"name": "Golang Monorepo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18506887",
+		"_collection_link": "https://lively-shadow-869772.postman.co/workspace/Pablo's~b682a4a4-2eb2-4a31-84a2-f470414ee35b/collection/18506887-cac1bf80-1783-494f-8478-96aa2ad322bf?action=share&source=collection_link&creator=18506887"
+	},
+	"item": [
+		{
+			"name": "QH?!",
+			"item": [
+				{
+					"name": "Groups",
+					"item": [
+						{
+							"name": "Ping",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/v1/ping",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"v1",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Grupo de Innovación\",\n  \"description\": \"Un grupo dedicado a discutir y compartir ideas sobre innovación tecnológica.\",\n  \"category\": \"tech\",\n  \"privacy\": \"private\",\n  \"max_members\": 20,\n  \"image_url\": \"https://example.com/innovation-group.png\",\n  \"organizer_id\": \"1\",\n  \"is_organizer_company\": false,\n  \"members\": [\"1\", \"2\", \"3\", \"4\"]\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/v1/groups",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"v1",
+										"groups"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Customers",
+					"item": [
+						{
+							"name": "Ping Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8089/api/v1/ping",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"v1",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Customers Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8089/api/v1/customers",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Costumer Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8089/api/v1/customers/164",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"164"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Costumer Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Homero\",\n    \"last_name\": \"Simpson\",\n    \"email\": \"homeros@pringfield.comdas\",\n    \"phone\": \"555123789\",\n    \"age\": 25,\n    \"birth_date\": \"1999-01-15T00:00:00Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8089/api/v1/customers",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Costumer Copy",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Emma\",\n    \"last_name\": \"Watson\",\n    \"email\": \"emma.watson@email.com\",\n    \"phone\": \"8888888888\",\n    \"age\": 20,\n    \"birth_date\": \"2004-01-15T00:00:00Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8089/api/v1/customers/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Costumer Copy",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Emma Emma\",\n    \"last_name\": \"Watson\",\n    \"email\": \"emmaemma@email.com\",\n    \"phone\": \"8888888888\",\n    \"age\": 20,\n    \"birth_date\": \"2004-01-15T00:00:00Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8089/api/v1/customers/176",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"176"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get KPI Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8089/api/v1/customers/kpi",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"kpi"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Monitoring",
+					"item": [
+						{
+							"name": "Ping Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/ping",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Health Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/health",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"health"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DB Health Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/db-health",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"db-health"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Metrics Copy",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Events",
+					"item": [
+						{
+							"name": "Create Event Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Event Name\",\n    \"location\": \"Event Location\",\n    \"event_date\": \"2024-05-20\",\n    \"description\": \"Event Description\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/events/create-event",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"events",
+										"create-event"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Persons",
+					"item": [
+						{
+							"name": "Create Person Protected",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMzUiLCJleHAiOjE3Mzg2NzM1OTgsImlhdCI6MTczODQxNDM5OH0.rqKy5cUqXjawIRY7w5KWMY8R21mtWauPkoZRTGSijpY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\": \"Homero\",\n    \"last_name\": \"Simpson\",\n    \"age\": 40,\n    \"gender\": \"male\",\n    \"national_id\": 1234567890,\n    \"qualification\": 7,\n    \"phone\": \"+11234567890\",\n    \"interests\": [\"beer\", \"doughnuts\", \"TV\"],\n    \"hobbies\": [\"fishing\", \"sleeping\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/person/protected",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"person",
+										"protected"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Person Public",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\": \"Homero\",\n    \"last_name\": \"Simpson\",\n    \"age\": 40,\n    \"gender\": \"male\",\n    \"national_id\": 1234567890,\n    \"phone\": \"+11234567890\",\n    \"interests\": [\"beer\", \"doughnuts\", \"TV\"],\n    \"hobbies\": [\"fishing\", \"sleeping\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/person/public",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"person",
+										"public"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Assessments",
+					"item": [
+						{
+							"name": "Create Assessment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMzUiLCJleHAiOjE3Mzg2NzM1OTgsImlhdCI6MTczODQxNDM5OH0.rqKy5cUqXjawIRY7w5KWMY8R21mtWauPkoZRTGSijpY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"candidate_id\": \"53e5cac4-7152-438d-b3ae-c9194009fbce\",\n  \"start_date\": \"2025-03-01T09:00:00Z\",\n  \"end_date\": \"2025-03-01T12:00:00Z\",\n  \"status\": \"pending\",\n  \"max_duration\": \"3h0m0s\",\n  \"skills\": [\n    {\n      \"id\": \"skill1\",\n      \"skill_name\": \"Go\",\n      \"skill_level\": \"advanced\"\n    },\n    {\n      \"id\": \"skill2\",\n      \"skill_name\": \"Bases de Datos\",\n      \"skill_level\": \"intermediate\"\n    }\n  ],\n  \"problem\": {\n    \"id\": \"prob1\",\n    \"description\": \"Implementa una API REST en Go que gestione usuarios.\",\n    \"created_at\": \"2025-01-30T10:00:00Z\"\n  },\n  \"unit_tests\": [\n    {\n      \"id\": \"test1\",\n      \"test_name\": \"Probar el endpoint /usuarios\",\n      \"input_data\": \"{\\\"method\\\":\\\"GET\\\",\\\"url\\\":\\\"/usuarios\\\"}\",\n      \"expected_output\": \"{\\\"status\\\":200,\\\"body\\\":[{\\\"id\\\":1,\\\"nombre\\\":\\\"Juan Pérez\\\"}]}\",\n      \"created_at\": \"2025-01-30T10:05:00Z\"\n    },\n    {\n      \"id\": \"test2\",\n      \"test_name\": \"Probar la creación de un usuario\",\n      \"input_data\": \"{\\\"method\\\":\\\"POST\\\",\\\"url\\\":\\\"/usuarios\\\",\\\"body\\\":{\\\"nombre\\\":\\\"Ana Gómez\\\"}}\",\n      \"expected_output\": \"{\\\"status\\\":201,\\\"body\\\":{\\\"id\\\":2,\\\"nombre\\\":\\\"Ana Gómez\\\"}}\",\n      \"created_at\": \"2025-01-30T10:10:00Z\"\n    }\n  ]\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/assessments/protected",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"assessments",
+										"protected"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Protected Ping",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKemRXSWlPaUl4TXpVaUxDSnpZMjl3WlhNaU9sc2ljMk5vWldSMWJHVmtMV0ZqZEdsdmJuTTZiVzlrYVdaNUlpd2lZMjl1Ym1WamRHbHZibk02Y21WaFpDSXNJbVp5WlhGMVpXNTBMWEYxWlhOMGFXOXVjenB5WldGa0lpd2lkWE5sY25NNmNtVmhaRjl3Y205bWFXeGxYMlY0ZEhKaElpd2laR0Z6YUdKdllYSmtPbUZzWlhKMGN6cHlaV0ZrSWl3aVkyOXVibVZqZEdsdmJuTTZaR2x6WTI5dWJtVmpkQ0lzSW5sdmRYSXRZV04wYVc5dWN6cHlaV0ZrSWl3aWJXRnVkV0ZzTFdGamRHbHZibk02Y21WaFpDSXNJbUZzWlhKMGN6cHlaV0ZrSWl3aVlXeGxjblJ6T20xdlpHbG1lU0lzSW0xdmJtbDBiM0p6T25KbFlXUWlMQ0owWVdkek9tMXZaR2xtZVNJc0luTnhkV0ZrY3kxaGJHVnlkSE02Y21WaFpDSXNJbmx2ZFhJdFlXeGxjblJ6T20xdlpHbG1lU0lzSW1SaGMyaGliMkZ5WkRwamIyeHNaV2RsY3pweVpXRmtJaXdpWkdGemFHSnZZWEprT25CeWIyWnBiR1U2Y21WaFpDSXNJblZ6WlhKek9uSmxZV1FpTENKdFpYUnlhV010WkdGMFlUcHRiMlJwWm5raUxDSjViM1Z5TFdGamRHbHZibk02Ylc5a2FXWjVJaXdpYldWMGNtbGpMV1JoZEdFNmMzQnlhVzUwY3pwdGIyUnBabmtpTENKemEybHNiQzFoYzNObGMzTnRaVzUwY3pwd2RXSnNhWE5vSWl3aWJXVjBjbWxqTFdSaGRHRTZjM0J5YVc1MGN6cGtaV3hsZEdVaUxDSjBZV2R6T21SbGJHVjBaU0lzSW1Gc1pYSjBMWFI1Y0dWek9tMXZaR2xtZVNJc0luTmphR1ZrZFd4bFpDMWhZM1JwYjI1ek9uSmxZV1FpTENKemNYVmhaQzFzYjJjdGRIbHdaWE02Y21WaFpDSXNJbU5zYVdWdWRITTZjbVZoWkNJc0ltUmhjMmhpYjJGeVpEcHRiMjVwZEc5eWN6cHlaV0ZrSWl3aWJXVjBjbWxqTFdSaGRHRTZhWE56ZFdWek9tMXZaR2xtZVNJc0ltRnNaWEowTFhSNWNHVnpPbkpsWVdRaUxDSnlaWEJ2Y25RdGRHVnRjR3hoZEdWek9uSmxZV1FpTENKaFkzUnBiMjV6T20xdlpHbG1lU0lzSW5OeGRXRmtjenBoWkcxcGJpSXNJbVJoYzJoaWIyRnlaRHByYm05M2JHVmtaMlV0ZEhKbFpUcHlaV0ZrSWl3aVkyOXRjR3hwWVc1alpTMWhZM1JwYjI1ek9uSmxZV1FpTENKbFpIVmpZWFJwYjI0dFkyOXVkR1Z1ZEhNNmJXOWthV1o1SWl3aWRYTmxjbk02Ylc5a2FXWjVJaXdpYzNGMVlXUXRiRzluTFhSNWNHVnpPbTF2WkdsbWVTSXNJblZ6WlhKek9tMWhjQzF0WlhSeWFXTXRjMjkxY21ObElpd2liV0Z1ZFdGc0xXRmpkR2x2Ym5NNmJXOWthV1o1SWl3aWMzRjFZV1F0Ykc5bmN6cHlaV0ZrSWl3aVkyOXRjR3hwWVc1alpTMWhZM1JwYjI1ek9tMXZaR2xtZVNJc0luTnJhV3hzTFdGemMyVnpjMjFsYm5Sek9tVjJZV3gxWVhSbElpd2ljbVZ3YjNKMGN6cGpjbVZoZEdVaUxDSnRaWFJ5YVdNdFpHRjBZVHB6Y0hKcGJuUnpPbkpsWVdRaUxDSjBZV2R6T25KbFlXUWlMQ0poYVMxaGJtRnNlWE5wY3pweVpXRmtJaXdpYzNGMVlXUXRiRzluY3pwdGIyUnBabmtpTENKemNYVmhaSE10WVd4bGNuUnpPbTF2WkdsbWVTSXNJbkpsY0c5eWRITTZjbVZoWkNJc0ltRmpkR2x2YmkxMGVYQmxjenB5WldGa0lpd2liVzl1YVhSdmNuTTZaR1ZzWlhSbElpd2laR0Z6YUdKdllYSmtPbUZqZEdsdmJuTXRiV1YwY21samN6cHlaV0ZrSWl3aVlXTjBhVzl1Y3pweVpXRmtJaXdpYlc5dWFYUnZjbk02Ylc5a2FXWjVJaXdpWkdGemFHSnZZWEprT21OdmJYQmhjbVU2Y21WaFpDSXNJbk54ZFdGa2N6cHlaV0ZrSWl3aWVXOTFjaTFoYkdWeWRITTZjbVZoWkNJc0ltUnZiV0ZwYm5NNmNtVmhaQ0lzSW0xbGRISnBZeTFrWVhSaE9tbHpjM1ZsY3pwa1pXeGxkR1VpTENKdFpYUnlhV010WkdGMFlUcHBjM04xWlhNNmNtVmhaQ0lzSW5OeGRXRmtMV3h2WnkxMGVYQmxjenBrWld4bGRHVWlMQ0pqYjI1dVpXTjBhVzl1Y3pwamIyNXVaV04wSWl3aVpHRnphR0p2WVhKa09uTnJhV3hzY3kxemJtRndjMmh2ZEhNNmNtVmhaQ0lzSW1Wa2RXTmhkR2x2YmkxamIyNTBaVzUwY3pweVpXRmtJaXdpWkdGemFHSnZZWEprT25SdmNHbGpjenB5WldGa0lsMHNJbkp2YkdWeklqcGJJbEpQVDB0SlJTSXNJbE5SVlVGRVgwMUZUVUpGVWlJc0lsTkZUa2xQVWlKZExDSmxlSEFpT2pFM016Z3pORGd5TWpWOS5IZ24wVWRSNG11MjVvMDdTRGFxdEVoUHlhc2ljZlpPR1FmLTdzLWtGVEQwIiwiZXhwIjoxNzM4NTIxMDI3LCJpYXQiOjE3MzgyNjE4Mjd9.JHidYZiyYp0aoMkjhdItPp37LxcoN8Xk0nIPfIp-PQM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/assessments/protected/ping",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"assessments",
+										"protected",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Generate Assessment Link",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMzUiLCJleHAiOjE3Mzg2NzM1OTgsImlhdCI6MTczODQxNDM5OH0.rqKy5cUqXjawIRY7w5KWMY8R21mtWauPkoZRTGSijpY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/assessments/protected/bf753316-4a20-482b-9fd9-6c786f1d8474/link",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"assessments",
+										"protected",
+										"bf753316-4a20-482b-9fd9-6c786f1d8474",
+										"link"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Assessment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMzUiLCJleHAiOjE3Mzg2NzM1OTgsImlhdCI6MTczODQxNDM5OH0.rqKy5cUqXjawIRY7w5KWMY8R21mtWauPkoZRTGSijpY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/assessments/protected/57671d55-be92-4996-914c-0b8476e0dbde",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"assessments",
+										"protected",
+										"57671d55-be92-4996-914c-0b8476e0dbde"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Send Request",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMzUiLCJleHAiOjE3Mzg2NzM1OTgsImlhdCI6MTczODQxNDM5OH0.rqKy5cUqXjawIRY7w5KWMY8R21mtWauPkoZRTGSijpY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/assessments/protected/c2593042-d216-4247-89d5-48de919f441a/link",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"assessments",
+										"protected",
+										"c2593042-d216-4247-89d5-48de919f441a",
+										"link"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Authe",
+					"item": [
+						{
+							"name": "HR Pep Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n    \"username\": \"pablo.cristo@teamcubation.com\",\n    \"password\": \"7QOGd3AlWnu4SjVr\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/authe/validated?type=pep",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"authe",
+										"validated"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "pep"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Notification",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Create User Public",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user_type\": \"regular\",\n  \"email_validated\": false,\n  \"person_id\": \"3d1130b1-2dff-4e8c-bbbc-e56e5c960460\",\n  \"credentials\": {\n    \"email\": \"homero.simpson@example.com\",\n    \"password\": \"doh123\"\n  },\n  \"roles\": [\n    {\n      \"name\": \"user\",\n      \"permissions\": [\n        {\n          \"name\": \"tweet:read\",\n          \"description\": \"Permite leer tweets\"\n        },\n        {\n          \"name\": \"tweet:write\",\n          \"description\": \"Permite escribir tweets\"\n        }\n      ]\n    }\n  ]\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/users/public",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"public"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create User Public Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"follower_id\": \"fb312abc-d3ee-4450-8c3c-ac4ff1f3ed86\",\n    \"followee_id\": \"8aa26deb-ab89-42df-a757-59633b35731b\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/users/public/follow",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"public",
+										"follow"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Follower Users Public",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/users/public/3ce5a13b-f1f1-47db-879b-446a55c2fa74/followers",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"public",
+										"3ce5a13b-f1f1-47db-879b-446a55c2fa74",
+										"followers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Followee Users Public Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/users/public/d89972a7-b476-407a-b98b-bd37d11a6e3e/followees",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"public",
+										"d89972a7-b476-407a-b98b-bd37d11a6e3e",
+										"followees"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Api Check",
+					"item": [
+						{
+							"name": "Ping",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/ping",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Candidate",
+					"item": [
+						{
+							"name": "Create Candidate",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMzUiLCJleHAiOjE3Mzg2NzM1OTgsImlhdCI6MTczODQxNDM5OH0.rqKy5cUqXjawIRY7w5KWMY8R21mtWauPkoZRTGSijpY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"person_id\": \"e7224750-c2a6-4798-b3bd-7eefdd2b098a\",\n  \"email\": \"ejemplo@dominio.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/candidates/protected",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"candidates",
+										"protected"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Candidate",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMzUiLCJleHAiOjE3Mzg2NzM1OTgsImlhdCI6MTczODQxNDM5OH0.rqKy5cUqXjawIRY7w5KWMY8R21mtWauPkoZRTGSijpY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/candidates/protected/c6c4a0cf-c342-4aea-a29b-ab955208342e",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"candidates",
+										"protected",
+										"c6c4a0cf-c342-4aea-a29b-ab955208342e"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Tweets",
+					"item": [
+						{
+							"name": "Create Tweet",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"8aa26deb-ab89-42df-a757-59633b35731b\",\n    \"content\": \"me gustan las rosquillas!88888\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/tweets/public",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"tweets",
+										"public"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Timeline",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/tweets/public/fb312abc-d3ee-4450-8c3c-ac4ff1f3ed86/timeline",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"tweets",
+										"public",
+										"fb312abc-d3ee-4450-8c3c-ac4ff1f3ed86",
+										"timeline"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
