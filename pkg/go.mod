@@ -1,4 +1,4 @@
-module github.com/teamcubation/teamcandidates/pkg
+module github.com/teamcubation/test_TC/pkg
 
 go 1.23
 
